@@ -21,7 +21,7 @@ RUN \
   rm -rf /tmp/docker_tmp
 
 # Define default command if required, eg:
-CMD ["nginx -g 'daemon off;'"]
+# CMD ["nginx -g 'daemon off;'"]
 
 # Ports to be exposed
 EXPOSE 53
