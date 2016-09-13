@@ -15,7 +15,7 @@ docker build -t <your_new_repo_name_here> .
 ```
 docker run -ti --net bridge -P -v <your_host_share_path>:<your_container_share_path> <repo_name_here> /bin/bash
 ```
-#3 Run the image with fish interactive shell:
+## Run the image with fish interactive shell:
 ```
 docker run -ti --net bridge -P -v <your_host_share_path>:<your_container_share_path> <repo_name_here> /usr/bin/fish
 ```
