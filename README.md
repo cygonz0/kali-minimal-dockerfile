@@ -1,7 +1,7 @@
 # kali-minimal-dockerfile
-Dockerfile to automatically set up selected security tools to create a light-weight Kali Linux Docker image. Tools can be added by modifying the Dockerfile accordingly.
+Dockerfile to automatically set up selected security tools to create a "minimal" Kali Linux docker image. Tools can be added by modifying the Dockerfile accordingly.
 ## Installation
-First, install docker for your OS and make sure that it is running. Then pull the official Kali Linux Docker base-image:
+First, install docker for your OS and make sure that the docker daemon is running. Then pull the official Kali Linux docker base-image:
 ```
 docker pull kalilinux/kali-linux-docker
 ```
@@ -9,7 +9,7 @@ docker pull kalilinux/kali-linux-docker
 ```
 git clone https://github.com/v00d00sec/kali-minimal-dockerfile.git
 cd kali-minimal-dockerfile
-docker build -t <your_repo_name_here> .
+docker build -t <your_new_repo_name_here> .
 ```
 ## Run the image (interactive shell):
 ```
