@@ -18,7 +18,6 @@ RUN \
   git clone https://github.com/longld/peda.git /root/peda && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /root/fish-shell.deb && \
-  rm -rf /root/peda && \
   rm -rf /tmp/docker_tmp
 
 # Define default command if required, eg:
