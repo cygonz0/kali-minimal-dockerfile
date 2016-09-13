@@ -9,9 +9,9 @@ docker pull kalilinux/kali-linux-docker
 ```
 git clone https://github.com/v00d00sec/kali-minimal-dockerfile.git
 cd kali-minimal-dockerfile
-docker build -t <repo_name_here> .
+docker build -t <your_repo_name_here> .
 ```
-## Run the image:
+## Run the image (interactive shell):
 ```
-docker run -ti --net bridge -P -v <host_share_path>:<container_share_path> <repo_name_here> /bin/bash
+docker run -ti --net bridge -P -v <your_host_share_path>:<your_container_share_path> <repo_name_here> /bin/bash
 ```
