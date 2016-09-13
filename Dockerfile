@@ -5,7 +5,9 @@ FROM kalilinux/kali-linux-docker
 
 # Hack to prevent hash-mismatch error if behind proxy
 COPY 99fixbadproxy /etc/apt/apt.conf.d/
+# Copy fish shell deb package
 COPY fish-shell.deb /root/fish-shell.deb
+# Copy gdbinit file for gdb-peda
 COPY gdbinit /root/.gdbinit
 
 # RUN routine
