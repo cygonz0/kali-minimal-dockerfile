@@ -6,20 +6,30 @@ FROM kalilinux/kali-linux-docker
 # Hack to prevent hash-mismatch error if behind proxy
 COPY 99fixbadproxy /etc/apt/apt.conf.d/
 COPY fish-shell.deb /root/fish-shell.deb
+COPY gdbinit /root/.gdbinit
 
 # RUN routine
 RUN \
   cd /tmp && mkdir docker_tmp && cd docker_tmp && \
   apt-get update && \
   apt-get install -y apt bc gettext-base man-db fontconfig powerline && \
-  dpkg -i ~/fish-shell.deb && \
-  apt-get install -y nmap hydra john tcpdump metasploit-framework sqlmap fierce dnsrecon wpscan dirb python-pip git && \
-  rm -rf /var/lib/apt/lists/*
+  dpkg -i /root/fish-shell.deb && \
+  apt-get install -y nmap hydra john tcpdump metasploit-framework sqlmap fierce dnsrecon wpscan dirb python-pip git nginx sslscan dnsenum dnsmap p0f joomscan davtest wfuzz sipvicious sslstrip gpp-decrypt patator wordlists powersploit enu$
+  git clone https://github.com/longld/peda.git /root/peda && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /root/fish-shell.deb && \
+  rm -rf /root/peda && \
+  rm -rf /tmp/docker_tmp
 
 # Define default command if required, eg:
-# CMD ["cmd_goes_here"]
+CMD ["nginx -g 'daemon off;'"]
 
 # Ports to be exposed
+EXPOSE 53
 EXPOSE 80
+EXPOSE 443
+EXPOSE 4444
 EXPOSE 8000
+EXPOSE 8080
+EXPOSE 8443
 EXPOSE 31337
