@@ -14,7 +14,7 @@ RUN \
   apt-get update && \
   apt-get install -y apt bc gettext-base man-db fontconfig powerline && \
   dpkg -i /root/fish-shell.deb && \
-  apt-get install -y nmap hydra john tcpdump metasploit-framework sqlmap fierce dnsrecon wpscan dirb python-pip git nginx sslscan dnsenum dnsmap p0f joomscan davtest wfuzz sipvicious sslstrip gpp-decrypt patator wordlists powersploit enu$
+  apt-get install -y nmap hydra john tcpdump metasploit-framework sqlmap fierce dnsrecon wpscan dirb python-pip git nginx sslscan dnsenum dnsmap p0f joomscan davtest wfuzz sipvicious sslstrip gpp-decrypt patator wordlists powersploit enum4linux onesixtyone apktool dex2jar smali dos2unix ridenum jad webshells smbclient nbtscan snmpcheck dnsutils mysql-server rsh-client gdb git && \
   git clone https://github.com/longld/peda.git /root/peda && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /root/fish-shell.deb && \
