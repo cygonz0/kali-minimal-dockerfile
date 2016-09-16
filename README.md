@@ -1,7 +1,7 @@
 # kali-minimal-dockerfile
 Dockerfile to automatically set up selected security tools to create a "minimal" Kali Linux docker image. Tools can be added by modifying the Dockerfile accordingly. Includes the installation of fish shell. 
 
-The complete build image can be downloaded from docker hub:
+To download the completed build image from docker hub:
 ```
 docker pull v00d00sec/kali_mini
 ```
