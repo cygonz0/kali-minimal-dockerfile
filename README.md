@@ -23,4 +23,6 @@ docker run -ti --net bridge -P -v <your_host_share_path>:<your_container_share_p
 ## Run the image with fish interactive shell:
 ```
 docker run -ti --net bridge -P -v <your_host_share_path>:<your_container_share_path> <repo_name_here> /usr/bin/fish
+e.g.
+docker run --rm -h "kali-mini" -ti --net bridge -P -v /Users/user/docker-share:/share v00d00sec/kali_mini /usr/bin/fish
 ```
